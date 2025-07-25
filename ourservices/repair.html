@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>CarZone Repair Services</title>
+  <style>
+    * { box-sizing: border-box; }
+
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background: #f8f9fa;
+      color: #333;
+      display: flex;
+      flex-direction: column;
+      min-height: 100vh;
+    }
+
+    header {
+      background: linear-gradient(135deg, #1c1c1c, #2e86de);
+      color: white;
+      padding: 30px 20px;
+      text-align: center;
+    }
+    header h1 {
+      margin: 0;
+      font-size: 2.5rem;
+    }
+    nav {
+      margin-top: 10px;
+    }
+    nav a {
+      color: white;
+      margin: 0 15px;
+      text-decoration: none;
+      font-weight: bold;
+    }
+    nav a:hover {
+      text-decoration: underline;
+    }
+
+    main {
+      flex: 1;
+      padding: 40px 20px 80px;
+      max-width: 1200px;
+      margin: auto;
+    }
+    h2 {
+      text-align: center;
+      font-size: 2.2rem;
+      color: #2e86de;
+      margin-bottom: 40px;
+    }
+
+    .service {
+      background: white;
+      margin-bottom: 40px;
+      padding: 30px;
+      border-radius: 12px;
+      box-shadow: 0 6px 16px rgba(0,0,0,0.06);
+    }
+    .service h3 {
+      margin-top: 0;
+      font-size: 1.6rem;
+      color: #1c1c1c;
+    }
+    .service p {
+      line-height: 1.6;
+    }
+
+    .slider {
+      position: relative;
+      margin-top: 20px;
+      border-radius: 12px;
+      overflow: hidden;
+      background: #000;
+    }
+
+    .slides {
+      position: relative;
+      width: 100%;
+    }
+    .slide {
+      display: none;
+    }
+    .slide.active {
+      display: block;
+    }
+    .slide img, .slide video {
+      width: 100%;
+      max-height: 480px;
+      object-fit: cover;
+      display: block;
+    }
+
+    .slider button {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      background: rgba(0,0,0,0.5);
+      color: white;
+      border: none;
+      padding: 10px;
+      font-size: 18px;
+      border-radius: 50%;
+      cursor: pointer;
+    }
+    .slider .prev { left: 10px; }
+    .slider .next { right: 10px; }
+    .slider button:hover {
+      background: rgba(0,0,0,0.8);
+    }
+
+    footer {
+      background-color: #1c1c1c;
+      color: #ccc;
+      text-align: center;
+      padding: 30px 20px;
+    }
+    .footer-links a {
+      margin: 0 15px;
+      color: #ccc;
+      text-decoration: none;
+      font-size: 0.95em;
+    }
+    .footer-links a:hover {
+      color: white;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Header -->
+  <header>
+    <h1>Repair Services</h1>
+    <p>Precision • Experience • Trust</p>
+    <nav>
+      <a href="../index.html">Home</a>
+      <a href="../gallery.html">Gallery</a>
+      <a href="../repair.html">Repairs</a>
+      <a href="../comment.html">Feedback</a>
+      <a href="../contact.html">Contact</a>
+    </nav>
+  </header>
+
+  <!-- Main Content -->
+  <main>
+    <h2>Expert Car Repairs & Diagnostics</h2>
+
+    <!-- Engine Repair -->
+    <section class="service">
+      <h3>Engine Diagnostics & Repair</h3>
+      <p>We diagnose and repair engine issues including oil leaks, timing belts, misfires, overheating, and more using advanced scan tools and factory-grade techniques.</p>
+      <div class="slider" data-slider>
+        <div class="slides">
+          <div class="slide active">
+            <img src="images/engine1.jpg" alt="Engine diagnosis">
+          </div>
+          <div class="slide">
+            <img src="images/engine2.jpg" alt="Engine repair work">
+          </div>
+          <div class="slide">
+            <video controls src="videos/engine.mp4"></video>
+          </div>
+        </div>
+        <button class="prev">&#10094;</button>
+        <button class="next">&#10095;</button>
+      </div>
+    </section>
+
+    <!-- Electrical Repair -->
+    <section class="service">
+      <h3>Electrical System Repairs</h3>
+      <p>From battery and alternator replacements to wiring, sensors, fuse boxes, and diagnostic trouble codes — we fix any electrical issue with precision.</p>
+      <div class="slider" data-slider>
+        <div class="slides">
+          <div class="slide active">
+            <img src="images/electrical1.jpg" alt="Wiring check">
+          </div>
+          <div class="slide">
+            <img src="images/electrical2.jpg" alt="ECU repair">
+          </div>
+          <div class="slide">
+            <video controls src="videos/electrical.mp4"></video>
+          </div>
+        </div>
+        <button class="prev">&#10094;</button>
+        <button class="next">&#10095;</button>
+      </div>
+    </section>
+
+    <!-- AC Repair -->
+    <section class="service">
+      <h3>AC & Heating Repairs</h3>
+      <p>We service compressors, condensers, evaporators, cabin filters, and full refrigerant systems to ensure your comfort in every season.</p>
+      <div class="slider" data-slider>
+        <div class="slides">
+          <div class="slide active">
+            <img src="images/ac1.jpg" alt="AC compressor repair">
+          </div>
+          <div class="slide">
+            <img src="images/ac2.jpg" alt="Cabin cooling system">
+          </div>
+          <div class="slide">
+            <video controls src="videos/ac.mp4"></video>
+          </div>
+        </div>
+        <button class="prev">&#10094;</button>
+        <button class="next">&#10095;</button>
+      </div>
+    </section>
+
+    <!-- Transmission Repair -->
+    <section class="service">
+      <h3>Transmission & Gearbox Service</h3>
+      <p>Clutch replacements, transmission flush, solenoid repair, and full rebuilds for automatic and manual gearboxes — we handle it all.</p>
+      <div class="slider" data-slider>
+        <div class="slides">
+          <div class="slide active">
+            <img src="images/trans1.jpg" alt="Transmission diagnosis">
+          </div>
+          <div class="slide">
+            <img src="images/trans2.jpg" alt="Gearbox repair">
+          </div>
+          <div class="slide">
+            <video controls src="videos/transmission.mp4"></video>
+          </div>
+        </div>
+        <button class="prev">&#10094;</button>
+        <button class="next">&#10095;</button>
+      </div>
+    </section>
+
+    <!-- Diagnostics -->
+    <section class="service">
+      <h3>Computerized Diagnostics</h3>
+      <p>Using OBD-II and manufacturer software, we quickly diagnose check engine lights, ABS faults, airbag codes, and more. Fast and reliable fault tracing.</p>
+      <div class="slider" data-slider>
+        <div class="slides">
+          <div class="slide active">
+            <img src="images/diagnostic1.jpg" alt="Scan tools">
+          </div>
+          <div class="slide">
+            <img src="images/diagnostic2.jpg" alt="Live data readout">
+          </div>
+          <div class="slide">
+            <video controls src="videos/diagnostics.mp4"></video>
+          </div>
+        </div>
+        <button class="prev">&#10094;</button>
+        <button class="next">&#10095;</button>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer>
+    <div class="footer-links">
+      <a href="index.html">Home</a>
+      <a href="gallery.html">Gallery</a>
+      <a href="modification.html">Our Services</a>
+      <a href="repair.html">Repairs</a>
+      <a href="contact.html">Contact</a>
+    </div>
+    <p>&copy; 2025 CarZone Garage. All rights reserved.</p>
+  </footer>
+
+  <!-- JavaScript for all sliders -->
+  <script>
+    document.querySelectorAll('[data-slider]').forEach((slider) => {
+      const slides = slider.querySelectorAll('.slide');
+      const prevBtn = slider.querySelector('.prev');
+      const nextBtn = slider.querySelector('.next');
+      let index = 0;
+
+      function showSlide(i) {
+        slides.forEach((s, idx) => s.classList.toggle('active', idx === i));
+      }
+
+      function goTo(i) {
+        index = (i + slides.length) % slides.length;
+        showSlide(index);
+      }
+
+      prevBtn.addEventListener('click', () => goTo(index - 1));
+      nextBtn.addEventListener('click', () => goTo(index + 1));
+    });
+  </script>
+
+</body>
+</html>
