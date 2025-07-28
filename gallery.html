@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Gallery - CarZone</title>
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    html, body {
+      margin: 0;
+      padding: 0;
+      height: 100%;
+      font-family: 'Segoe UI', sans-serif;
+      background: #f3f3f3;
+      color: #333;
+    }
+
+    header {
+      background: linear-gradient(135deg, #1c1c1c, #2e86de);
+      color: white;
+      padding: 30px 20px;
+      text-align: center;
+    }
+
+    header h1 {
+      font-size: 3em;
+      margin-bottom: 10px;
+    }
+
+    nav {
+      margin-top: 10px;
+    }
+
+    nav a {
+      color: white;
+      text-decoration: none;
+      margin: 0 15px;
+      font-weight: bold;
+    }
+
+    nav a:hover {
+      text-decoration: underline;
+    }
+
+    main {
+      flex: 1;
+      padding: 40px 20px;
+      background-color: #f9f9f9;
+    }
+
+    h2 {
+      font-size: 2em;
+      color: #2e86de;
+      text-align: center;
+      margin-bottom: 30px;
+    }
+
+    .gallery {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px;
+      justify-content: center;
+    }
+
+    .gallery img {
+      width: 250px;
+      height: 180px;
+      object-fit: cover;
+      border-radius: 10px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+      transition: transform 0.3s ease;
+      cursor: pointer;
+    }
+
+    .gallery img:hover {
+      transform: scale(1.05);
+    }
+
+    .lightbox {
+      display: none;
+      position: fixed;
+      z-index: 999;
+      top: 0;
+      left: 0;
+      width: 100vw;
+      height: 100vh;
+      background: rgba(0, 0, 0, 0.8);
+      justify-content: center;
+      align-items: center;
+    }
+
+    .lightbox img {
+      max-width: 90%;
+      max-height: 80%;
+      border-radius: 10px;
+      box-shadow: 0 0 20px rgba(255, 255, 255, 0.5);
+    }
+
+    .lightbox:target {
+      display: flex;
+    }
+
+    footer {
+      background-color: #1c1c1c;
+      color: #ccc;
+      text-align: center;
+      padding: 30px 20px;
+    }
+
+    .footer-links a {
+      margin: 0 15px;
+      color: #ccc;
+      text-decoration: none;
+      font-size: 0.95em;
+    }
+
+    .footer-links a:hover {
+      color: #fff;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Header -->
+  <header>
+    <h1>CarZone Gallery</h1>
+    <p>Explore Our Custom Builds and Automotive Art</p>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="gallery.html">Gallery</a>
+      <a href="comment.html">Feedback</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+  </header>
+
+  <!-- Main Gallery Section -->
+  <main>
+    <h2>Our Work in Pictures</h2>
+    <div class="gallery">
+      <a href="#img1"><img src="images/image1.jpg" alt="Gallery Image 1"></a>
+      <a href="#img2"><img src="images/image2.jpg" alt="Gallery Image 2"></a>
+      <a href="#img3"><img src="images/imahe3.jpg" alt="Gallery Image 3"></a>
+    </div>
+
+    <!-- Lightbox Views -->
+    <div id="img1" class="lightbox"><a href="#"><img src="images/image1.jpg" alt="Large Image 1"></a></div>
+    <div id="img2" class="lightbox"><a href="#"><img src="images/image2.jpg" alt="Large Image 2"></a></div>
+    <div id="img3" class="lightbox"><a href="#"><img src="images/imahe3.jpg" alt="Large Image 3"></a></div>
+  </main>
+
+  <!-- Footer -->
+  <footer>
+    <div class="footer-links">
+      <a href="index.html">Home</a>
+      <a href="gallery.html">Gallery</a>
+      <a href="comment.html">Feedback</a>
+      <a href="contact.html">Contact</a>
+    </div>
+    <p>&copy; 2025 CarZone Workshop. All rights reserved.</p>
+  </footer>
+
+</body>
+</html>

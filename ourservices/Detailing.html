@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Car Detailing Services | CarZone</title>
+  <style>
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background: #f4f4f4;
+      color: #333;
+      display: flex;
+      flex-direction: column;
+      min-height: 100vh;
+    }
+
+    header {
+      background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+      color: #fff;
+      padding: 30px 20px;
+      text-align: center;
+    }
+    header h1 {
+      margin: 0;
+      font-size: 2.5rem;
+    }
+    nav {
+      margin-top: 10px;
+    }
+    nav a {
+      color: #fff;
+      margin: 0 15px;
+      text-decoration: none;
+      font-weight: bold;
+    }
+    nav a:hover {
+      text-decoration: underline;
+    }
+
+    main {
+      flex: 1;
+      padding: 40px 20px 80px;
+      max-width: 1200px;
+      margin: auto;
+    }
+
+    h2 {
+      text-align: center;
+      font-size: 2.2rem;
+      color: #2c5364;
+      margin-bottom: 40px;
+    }
+
+    .section {
+      background: #fff;
+      margin-bottom: 40px;
+      padding: 30px;
+      border-radius: 12px;
+      box-shadow: 0 6px 16px rgba(0,0,0,0.08);
+    }
+
+    .section h3 {
+      margin-top: 0;
+      font-size: 1.6rem;
+      color: #1e1e1e;
+    }
+
+    .section p {
+      line-height: 1.6;
+      font-size: 1rem;
+    }
+
+    .slider {
+      position: relative;
+      margin-top: 20px;
+      border-radius: 12px;
+      overflow: hidden;
+      background: #000;
+    }
+
+    .slides {
+      position: relative;
+      width: 100%;
+    }
+
+    .slide {
+      display: none;
+    }
+
+    .slide.active {
+      display: block;
+    }
+
+    .slide img,
+    .slide video {
+      width: 100%;
+      max-height: 450px;
+      object-fit: cover;
+    }
+
+    .slider button {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      background: rgba(0, 0, 0, 0.5);
+      color: #fff;
+      border: none;
+      padding: 10px;
+      font-size: 18px;
+      border-radius: 50%;
+      cursor: pointer;
+    }
+
+    .slider .prev {
+      left: 10px;
+    }
+
+    .slider .next {
+      right: 10px;
+    }
+
+    footer {
+      background-color: #1c1c1c;
+      color: #ccc;
+      text-align: center;
+      padding: 30px 20px;
+    }
+
+    .footer-links a {
+      margin: 0 15px;
+      color: #ccc;
+      text-decoration: none;
+      font-size: 0.95em;
+    }
+
+    .footer-links a:hover {
+      color: white;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Header -->
+  <header>
+    <h1>Car Detailing Services</h1>
+    <p>Professional | Premium Finish | Showroom Shine</p>
+    <nav>
+      <a href="../index.html">Home</a>
+      <a href="../gallery.html">Gallery</a>
+      <a href="../modification.html">Our Services</a>
+      <a href="../repair.html">Repairs</a>
+      <a href="../detailing.html">Detailing</a>
+      <a href="../contact.html">Contact</a>
+    </nav>
+  </header>
+
+  <!-- Main Content -->
+  <main>
+    <h2>Premium Car Detailing</h2>
+
+    <!-- Interior -->
+    <section class="section">
+      <h3>Interior Detailing</h3>
+      <p>We deep clean every inch of your interior including seats, carpets, dashboard, vents, and more. Using steam cleaners, air compressors, and premium products, we restore your cabin like new.</p>
+      <div class="slider" data-slider>
+        <div class="slides">
+          <div class="slide active">
+            <img src="images/interior1.jpg" alt="Interior Detailing">
+          </div>
+          <div class="slide">
+            <img src="images/interior2.jpg" alt="Seat Cleaning">
+          </div>
+          <div class="slide">
+            <video controls src="videos/interior.mp4"></video>
+          </div>
+        </div>
+        <button class="prev">&#10094;</button>
+        <button class="next">&#10095;</button>
+      </div>
+    </section>
+
+    <!-- Exterior -->
+    <section class="section">
+      <h3>Exterior Detailing</h3>
+      <p>From multi-stage foam wash to hand polish, clay bar treatment, and machine buffing — your car’s paint will regain its original shine and protection.</p>
+      <div class="slider" data-slider>
+        <div class="slides">
+          <div class="slide active">
+            <img src="images/exterior1.jpg" alt="Exterior Polish">
+          </div>
+          <div class="slide">
+            <img src="images/exterior2.jpg" alt="Foam Wash">
+          </div>
+          <div class="slide">
+            <video controls src="videos/exterior.mp4"></video>
+          </div>
+        </div>
+        <button class="prev">&#10094;</button>
+        <button class="next">&#10095;</button>
+      </div>
+    </section>
+
+    <!-- Ceramic Coating -->
+    <section class="section">
+      <h3>Ceramic Coating</h3>
+      <p>Protect your vehicle with our long-lasting nano-ceramic coating. It repels dirt, water, UV, and chemicals while giving your paint a glossy, durable finish that lasts for years.</p>
+      <div class="slider" data-slider>
+        <div class="slides">
+          <div class="slide active">
+            <img src="images/ceramic1.jpg" alt="Ceramic Coating">
+          </div>
+          <div class="slide">
+            <img src="images/ceramic2.jpg" alt="Hydrophobic Surface">
+          </div>
+          <div class="slide">
+            <video controls src="videos/ceramic.mp4"></video>
+          </div>
+        </div>
+        <button class="prev">&#10094;</button>
+        <button class="next">&#10095;</button>
+      </div>
+    </section>
+
+    <!-- Engine Bay -->
+    <section class="section">
+      <h3>Engine Bay Cleaning</h3>
+      <p>We clean and dress your engine compartment carefully without damaging sensors or electronics, giving your engine a fresh, tidy look.</p>
+      <div class="slider" data-slider>
+        <div class="slides">
+          <div class="slide active">
+            <img src="images/enginebay1.jpg" alt="Engine Bay Clean">
+          </div>
+          <div class="slide">
+            <img src="images/enginebay2.jpg" alt="Before & After">
+          </div>
+          <div class="slide">
+            <video controls src="videos/enginebay.mp4"></video>
+          </div>
+        </div>
+        <button class="prev">&#10094;</button>
+        <button class="next">&#10095;</button>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer>
+    <div class="footer-links">
+      <a href="index.html">Home</a>
+      <a href="gallery.html">Gallery</a>
+      <a href="modification.html">Our Services</a>
+      <a href="repair.html">Repairs</a>
+      <a href="contact.html">Contact</a>
+    </div>
+    <p>&copy; 2025 CarZone Garage. All rights reserved.</p>
+  </footer>
+
+  <!-- JS for Sliders -->
+  <script>
+    document.querySelectorAll('[data-slider]').forEach((slider) => {
+      const slides = slider.querySelectorAll('.slide');
+      const prevBtn = slider.querySelector('.prev');
+      const nextBtn = slider.querySelector('.next');
+      let index = 0;
+
+      function showSlide(i) {
+        slides.forEach((s, idx) => s.classList.toggle('active', idx === i));
+      }
+
+      function goTo(i) {
+        index = (i + slides.length) % slides.length;
+        showSlide(index);
+      }
+
+      prevBtn.addEventListener('click', () => goTo(index - 1));
+      nextBtn.addEventListener('click', () => goTo(index + 1));
+    });
+  </script>
+
+</body>
+</html>
