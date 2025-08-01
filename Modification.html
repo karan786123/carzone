@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Modifications - CarZone</title>
+  <style>
+    * { box-sizing: border-box; }
+
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background: #f8f9fa;
+      color: #333;
+      display: flex;
+      flex-direction: column;
+      min-height: 100vh;
+    }
+
+    /* HEADER */
+    header {
+      background: linear-gradient(135deg, #1c1c1c, #2e86de);
+      color: white;
+      padding: 30px 20px;
+      text-align: center;
+    }
+    header h1 {
+      margin: 0;
+      font-size: 2.5rem;
+    }
+    nav { margin-top: 10px; }
+    nav a {
+      color: white;
+      margin: 0 15px;
+      text-decoration: none;
+      font-weight: bold;
+    }
+    nav a:hover { text-decoration: underline; }
+
+    /* MAIN */
+    main {
+      flex: 1;
+      padding: 40px 20px 80px;
+      max-width: 1200px;
+      margin: auto;
+    }
+    h2 {
+      color: #2e86de;
+      text-align: center;
+      margin-bottom: 40px;
+      font-size: 2.2rem;
+    }
+    .service {
+      background: white;
+      margin-bottom: 40px;
+      padding: 30px;
+      border-radius: 12px;
+      box-shadow: 0 6px 16px rgba(0,0,0,0.06);
+    }
+    .service h3 {
+      margin-top: 0;
+      color: #222;
+      font-size: 1.6rem;
+    }
+    .service p {
+      font-size: 1rem;
+      line-height: 1.7;
+    }
+
+    /* SLIDER */
+    .slider {
+      position: relative;
+      margin-top: 20px;
+      border-radius: 12px;
+      overflow: hidden;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+      background: #000;
+    }
+    .slides {
+      position: relative;
+      width: 100%;
+      height: 100%;
+    }
+    .slide {
+      display: none;
+      width: 100%;
+    }
+    .slide img,
+    .slide video {
+      display: block;
+      width: 100%;
+      max-height: 480px;
+      object-fit: cover;
+      background: #000;
+    }
+    .slide.active {
+      display: block;
+    }
+    .slider button.prev,
+    .slider button.next {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      background: rgba(0,0,0,0.5);
+      color: #fff;
+      border: none;
+      padding: 10px 14px;
+      cursor: pointer;
+      border-radius: 50%;
+      font-size: 18px;
+      transition: background .2s;
+    }
+    .slider button.prev:hover,
+    .slider button.next:hover {
+      background: rgba(0,0,0,0.8);
+    }
+    .slider button.prev { left: 10px; }
+    .slider button.next { right: 10px; }
+
+    /* DOTS (optional, can be removed) */
+    .dots {
+      text-align: center;
+      margin-top: 10px;
+    }
+    .dot {
+      height: 10px;
+      width: 10px;
+      margin: 0 4px;
+      background-color: #bbb;
+      border-radius: 50%;
+      display: inline-block;
+      cursor: pointer;
+    }
+    .dot.active {
+      background-color: #2e86de;
+    }
+
+    /* FOOTER */
+    footer {
+      background-color: #1c1c1c;
+      color: #ccc;
+      text-align: center;
+      padding: 30px 20px;
+    }
+    .footer-links a {
+      margin: 0 15px;
+      color: #ccc;
+      text-decoration: none;
+      font-size: 0.95em;
+    }
+    .footer-links a:hover { color: #fff; }
+
+    @media (max-width: 768px) {
+      header h1 { font-size: 2rem; }
+      .service { padding: 20px; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- HEADER -->
+  <header>
+    <h1>CarZone Modifications</h1>
+    <p>Performance • Style • Precision</p>
+    <nav>
+      <a href="../index.html">Home</a>
+      <a href="../gallery.html">Gallery</a>
+      <a href="../modification.html">Our Services</a>
+      <a href="../comment.html">Feedback</a>
+      <a href="../contact.html">Contact</a>
+    </nav>
+  </header>
+
+  <!-- MAIN -->
+  <main>
+    <h2>Our Custom Modification Services</h2>
+
+    <!-- Performance Upgrades -->
+    <section class="service">
+      <h3>Performance Upgrades</h3>
+      <p>
+        Boost power and responsiveness with our ECU remaps, turbo upgrades, sports exhausts, high-flow intakes, and dyno-tested tuning.
+        Built for Mercedes, BMW, Mustang, Audi, VW and more. Track-ready or street-smart — we tune it your way.
+      </p>
+
+      <div class="slider" data-slider>
+        <div class="slides">
+          <!-- Slide 1 -->
+          <div class="slide active">
+            <img src="images/performance.jpg" alt="Dyno tuning">
+          </div>
+          <!-- Slide 2 -->
+          <div class="slide">
+            <img src="images/performance2.jpg" alt="Performance parts">
+          </div>
+          <!-- Slide 3 (Video) -->
+          <div class="slide">
+            <video controls src="images/performence.mp4"></video>
+          </div>
+        </div>
+        <button class="prev">&#10094;</button>
+        <button class="next">&#10095;</button>
+        <div class="dots"></div>
+      </div>
+    </section>
+
+    <!-- Exterior & Styling Mods -->
+    <section class="service">
+      <h3>Exterior & Styling Mods</h3>
+      <p>
+        Widebody kits, aero packages, carbon fiber accents, wrap finishes (matte, satin, gloss), blackout trims, LED/HID upgrades —
+        we turn your vision into a statement build.
+      </p>
+
+      <div class="slider" data-slider>
+        <div class="slides">
+          <div class="slide active">
+            <img src="images/ExteriorWideBody.jpg" alt="Widebody kit">
+          </div>
+          <div class="slide">
+            <img src="images/ExreriorMattewrapfinish.jpg" alt="Matte wrap finish">
+          </div>
+          <div class="slide">
+          <video controls src="images/Exterior.mp4.mp4"></video>
+          </div>
+        </div>
+        <button class="prev">&#10094;</button>
+        <button class="next">&#10095;</button>
+        <div class="dots"></div>
+      </div>
+    </section>
+
+    <!-- Interior Customizations -->
+    <section class="service">
+      <h3>Interior Customizations</h3>
+      <p>
+        Bespoke leather, Alcantara, ambient lighting, infotainment upgrades, carbon fiber trim, and custom steering wheels —
+        your cabin, redesigned for comfort and class.
+      </p>
+
+      <div class="slider" data-slider>
+        <div class="slides">
+          <div class="slide active">
+            <img src="images/interior1.jpg" alt="Custom leather interior">
+          </div>
+          <div class="slide">
+            <img src="images/interior2.jpg" alt="Ambient lighting">
+          </div>
+          <div class="slide">
+            <video controls src="videos/interior.mp4"></video>
+          </div>
+        </div>
+        <button class="prev">&#10094;</button>
+        <button class="next">&#10095;</button>
+        <div class="dots"></div>
+      </div>
+    </section>
+
+    <!-- Suspension & Handling -->
+    <section class="service">
+      <h3>Suspension & Handling</h3>
+      <p>
+        Coilovers, air suspension, lowering kits, strut bars, sway bars, and race alignment — built for stability, cornering,
+        and aggressive stance without compromising safety.
+      </p>
+
+      <div class="slider" data-slider>
+        <div class="slides">
+          <div class="slide active">
+            <img src="images/suspension1.jpg" alt="Air suspension install">
+          </div>
+          <div class="slide">
+            <img src="images/suspension2.jpg" alt="Coilovers">
+          </div>
+          <div class="slide">
+            <video controls src="videos/suspension.mp4"></video>
+          </div>
+        </div>
+        <button class="prev">&#10094;</button>
+        <button class="next">&#10095;</button>
+        <div class="dots"></div>
+      </div>
+    </section>
+  </main>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="footer-links">
+      <a href="index.html">Home</a>
+      <a href="brands.html">Brands</a>
+      <a href="gallery.html">Gallery</a>
+      <a href="modification.html">Our Services</a>
+      <a href="contact.html">Contact</a>
+    </div>
+    <p>&copy; 2025 CarZone Workshop. All rights reserved.</p>
+  </footer>
+
+  <!-- SLIDER JS -->
+  <script>
+    // Initialize all sliders independently
+    document.querySelectorAll('[data-slider]').forEach((slider) => {
+      const slides = slider.querySelectorAll('.slide');
+      const prevBtn = slider.querySelector('.prev');
+      const nextBtn = slider.querySelector('.next');
+      const dotsContainer = slider.querySelector('.dots');
+      let index = 0;
+
+      // Create dots
+      slides.forEach((_, i) => {
+        const dot = document.createElement('span');
+        dot.className = 'dot' + (i === 0 ? ' active' : '');
+        dot.addEventListener('click', () => goTo(i));
+        dotsContainer.appendChild(dot);
+      });
+
+      const dots = dotsContainer.querySelectorAll('.dot');
+
+      function showSlide(i) {
+        slides.forEach(s => s.classList.remove('active'));
+        dots.forEach(d => d.classList.remove('active'));
+        slides[i].classList.add('active');
+        dots[i].classList.add('active');
+      }
+
+      function goTo(i) {
+        index = (i + slides.length) % slides.length;
+        showSlide(index);
+      }
+
+      prevBtn.addEventListener('click', () => goTo(index - 1));
+      nextBtn.addEventListener('click', () => goTo(index + 1));
+
+      // Optional: autoplay (uncomment to enable)
+      // setInterval(() => goTo(index + 1), 5000);
+    });
+  </script>
+</body>
+</html>
